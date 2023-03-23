@@ -18,6 +18,8 @@ module.exports = {
         'react',
     ],
     'rules': {
+        'react/jsx-key': 0,
+        'react/prop-types': 0,
         'linebreak-style': 0,
         'no-console': 0,
         'quotes': [2, 'single', { avoidEscape: true }],
@@ -40,7 +42,7 @@ module.exports = {
         'keyword-spacing': 'error', // пробел слева и справа для ключевых слов
         'no-multi-spaces': 'error', // не допускается несколько пробелов подряд
         'camelcase': 'error', // имена переменных и функций в стиле camelCase
-        'max-len': ['error', 150], // максимальная длина строки
+        'max-len': ['warn', 150], // максимальная длина строки
         'no-multiple-empty-lines': 'error', // не больше 2 пустых строк подряд
         'no-unused-vars': 'warn',
         'import/no-extraneous-dependencies': 0,
@@ -50,5 +52,6 @@ module.exports = {
         'no-underscore-dangle': 0,
         'require-jsdoc': 0,
         'react/react-in-jsx-scope': 0,
+        'react/no-unescaped-entities': 0,
     },
 };
