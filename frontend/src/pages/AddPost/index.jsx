@@ -15,7 +15,7 @@ export const AddPost = () => {
 
     const onClickRemoveImage = () => {};
 
-    const onChange = React.useCallback(value => {
+    const onChange = React.useCallback((value) => {
         setValue(value);
     }, []);
 
