@@ -18,7 +18,7 @@ export const create = async (request, responce) => {
             title: request.body.title,
             text: request.body.text,
             imageUrl: request.body.imageUrl,
-            tags: request.body.tags,
+            tags: request.body.tags.split(','),
             user: request.userId,
         });
 
@@ -57,7 +57,7 @@ export const getOne = async (request, responce) => {
             {
                 returnDocument: 'after',
             }
-        );
+        ).populate('user');
         responce.json(document);
     } catch (error) {
         console.log(error);
@@ -87,9 +87,8 @@ export const update = async (request, responce) => {
                 title: request.body.title,
                 text: request.body.text,
                 imageUrl: request.body.imageUrl,
-                tag: request.body.tags,
+                tag: request.body.tags.split(','),
                 user: request.userId,
-
             }
         );
         responce.json({
