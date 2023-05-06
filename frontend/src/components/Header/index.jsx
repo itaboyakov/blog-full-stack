@@ -1,6 +1,6 @@
 import React from 'react';
 import Button from '@mui/material/Button';
-import { Link, Navigate } from 'react-router-dom';
+import { Link, useNavigate } from 'react-router-dom';
 import { useSelector, useDispatch } from 'react-redux';
 import { isAuthSelector, logout } from '../../redux/slices/auth';
 
@@ -14,9 +14,10 @@ export const Header = () => {
         if (window.confirm('Вы точно хотите выйти?')) {
             dispatch(logout());
             window.localStorage.removeItem('token');
+            navigate('/login');
         }
     };
-
+    const navigate = useNavigate();
     return (
         <div className={styles.root}>
             <Container maxWidth = "lg">

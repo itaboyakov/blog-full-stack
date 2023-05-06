@@ -44,7 +44,9 @@ app.get('/posts/:id', PostController.getOne);
 app.post('/posts', checkAuth, postCreateValidation, PostController.create);
 app.delete('/posts/:id', checkAuth, PostController.remove);
 app.patch('/posts/:id', checkAuth, postCreateValidation, PostController.update);
-
+app.patch('/comment', checkAuth, PostController.addComment);
+// app.get('/posts/:id/comments', PostController.getComments);
+// app.get('/users/:id', UserController.getPublickUserData);
 app.listen(4444, error => {
     if (error) {
         return console.log(error);

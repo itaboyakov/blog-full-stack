@@ -91,3 +91,21 @@ export const getMe = async (request, responce) => {
         });
     }
 };
+// export const getPublickUserData = async (request, responce) => {
+//     try {
+//         const user = await UserModel.findById(request.params.id);
+//         if (!user) {
+//             return responce.status(404).json({
+//                 message: 'Пользователь не найден',
+//             });
+//         }
+//         console.log(user)
+//         const { ...userData } = user._doc;
+//         responce.json(userData);
+//     } catch (error) {
+//         console.log(error);
+//         responce.status(500).json({
+//             message: 'Нет доступа',
+//         });
+//     }
+// };

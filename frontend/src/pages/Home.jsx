@@ -55,13 +55,6 @@ export const Home = () => {
                                 },
                                 text: 'Это тестовый комментарий',
                             },
-                            {
-                                user: {
-                                    fullName: 'Иван Иванов',
-                                    avatarUrl: 'https://mui.com/static/images/avatar/2.jpg',
-                                },
-                                text: 'When displaying three lines or more, the avatar is not aligned at the top. You should set the prop to align the avatar at the top',
-                            },
                         ]}
                         isLoading={false}
                     />
